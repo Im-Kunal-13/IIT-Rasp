@@ -1,7 +1,7 @@
 // Requiring mongoose.
 const mongoose = require("mongoose");
 
-// Creating the Admin Schema model for our database in mongoose as by default we don't have to provide any Schema.
+// Creating the Data Schema model for our database in mongoose as by default we don't have to provide any Schema.
 const dataSchema = new mongoose.Schema({
   data: {
     // Type checking.
