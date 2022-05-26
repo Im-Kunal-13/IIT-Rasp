@@ -103,8 +103,9 @@ connection.once("open", () => {
   thoughtChangeStream.on("change", (change) => {
     switch (change.operationType) {
       case "insert":
+        console.log(change._id)
         const data = {
-          _id: change.fullDocument._id,
+          _id: change.fullDocument._id.toString(),
           data: change.fullDocument.data,
           time: change.fullDocument.time,
           date: change.fullDocument.date,
